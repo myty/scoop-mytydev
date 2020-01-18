@@ -1,0 +1,37 @@
+{
+    "version": "3.1.101",
+    "homepage": "https://www.microsoft.com/net/",
+    "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
+    "license": "MIT",
+    "url": "https://raw.githubusercontent.com/dotnet/toolset/78d1d208e2a86276224206d00b32313a0e527f15/scripts/obtain/dotnet-install.ps1",
+    "hash": "71a888f99a73936de8cbcc494df2706f77a69a98a9962a0351052c350f95be39",
+    "bin": [
+        "dotnet.exe",
+        ["pwsh.exe", "dotnet-install", "-File $dir\\dotnet-install.ps1 -InstallDir $dir"]
+    ],
+    "pre_install": [
+        "pwsh -File $cachedir\\dotnet-sdk#$version#https_raw.githubusercontent.com_dotnet_toolset_78d1d208e2a86276224206d00b32313a0e527f15_scripts_obtain_dotnet-install.ps1 -InstallDir $dir -Version $version"
+    ],
+    "depends": "pwsh",
+    "suggest": {
+        "Visual C++ Redistributable": ["extras/vcredist2015", "extras/vcredist2019"]
+    },
+    "env_add_path": ".",
+    "env_set": {
+        "DOTNET_ROOT": "$dir",
+        "MSBuildSDKsPath": "$dir\\sdk\\$version\\Sdks"
+    },
+    "checkver": {
+        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json",
+        "regex": "(?s)(?<rtv>[\\d.]+)[^\\d]*?([\\d.]+)[^\\d]*?(?:current|lts)"
+    },
+    "persist": [
+        "additionalDeps",
+        "host",
+        "packs",
+        "sdk",
+        "shared",
+        "store",
+        "templates"
+    ]
+}
