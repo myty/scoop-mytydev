@@ -3,11 +3,10 @@
     "homepage": "https://www.microsoft.com/net/",
     "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
     "license": "MIT",
-    "url": "https://raw.githubusercontent.com/dotnet/toolset/78d1d208e2a86276224206d00b32313a0e527f15/scripts/obtain/dotnet-install.ps1",
+    "url": "https://raw.githubusercontent.com/dotnet/toolset/78d1d208e2a86276224206d00b32313a0e527f15/scripts/obtain/dotnet-install.ps1#/_dotnet_install.ps1",
     "hash": "71a888f99a73936de8cbcc494df2706f77a69a98a9962a0351052c350f95be39",
     "bin": [
-        "dotnet.exe",
-        ["pwsh.exe", "dotnet-install", "-File $dir\\dotnet-install.ps1 -InstallDir $dir"]
+        ["pwsh.exe", "dotnet-install", "-File $dir\\_dotnet_install.ps1 -InstallDir $dir"]
     ],
     "pre_install": [
         "pwsh -File $cachedir\\dotnet-sdk#$version#https_raw.githubusercontent.com_dotnet_toolset_78d1d208e2a86276224206d00b32313a0e527f15_scripts_obtain_dotnet-install.ps1 -InstallDir $dir -Version $version"
