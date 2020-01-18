@@ -1,6 +1,8 @@
-# Scoop Main
+# Personal Scoop Bucket
 
-Core manifests for [Scoop](https://scoop.sh), the Windows command-line installer.
+This is my own versions of manifests for [Scoop](https://scoop.sh), the Windows command-line installer.
+
+Mostly a testing ground before moving any changes over to the main bucket.
 
 How do I install these manifests?
 ---------------------------------
