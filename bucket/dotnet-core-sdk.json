@@ -12,7 +12,7 @@
             "-File $dir\\_dotnet_install.ps1 -InstallDir $dir"
         ]
     ],
-    "pre_install": "pwsh -File $cachedir\\dotnet-core-sdk#3.1.101#https_raw.githubusercontent.com_dotnet_toolset_78d1d208e2a86276224206d00b32313a0e527f15_scripts_obtain_dotnet-install.ps1__dotnet_install.ps1 -InstallDir $dir -Version $version",
+    "post_install": "dotnet-install -Version $version",
     "depends": "pwsh",
     "suggest": {
         "Visual C++ Redistributable": [
