@@ -1,0 +1,31 @@
+{
+    "description": "The Live Coding Music Synth for Everyone",
+    "homepage": "https://github.com/samaaron/sonic-pi",
+    "version": "3.2.1",
+    "license": {
+        "identifier": "MIT,GPL3.0,...",
+        "url": "https://github.com/samaaron/sonic-pi/blob/master/LICENSE.md"
+    },
+    "url": "https://sonic-pi.net/files/releases/v3.2.1/sonic-pi-for-win-x64-portable-v3.2.1.paf.exe#/dl.7z",
+    "hash": "e8176b1e04873346c78dc1e7ed358712a2f07560596b0144c3ee686b7042a2de",
+    "bin": [
+        [
+            "SonicPiPortable.exe",
+            "SonicPi"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "SonicPiPortable.exe",
+            "SonicPi"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://sonic-pi.net/files/releases/v$version/sonic-pi-for-win-x64-portable-v$version.paf.exe#/dl.7z",
+        "hash": {
+            "find": "SHA256\\s+([a-fA-F\\d]{64})",
+            "url": "$baseurl/sonic-pi-for-win-x64-portable-v$version.paf-hashes.txt"
+        }
+    }
+}
