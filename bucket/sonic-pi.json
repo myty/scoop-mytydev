@@ -10,13 +10,13 @@
     "hash": "cf3c17bf966c115353b112548bea674c8e907a8cdd930d5f13934bb11b334198",
     "bin": [
         [
-            "SonicPiPortable.exe",
+            "Sonic Pi Portable.exe",
             "SonicPi"
         ]
     ],
     "shortcuts": [
         [
-            "SonicPiPortable.exe",
+            "Sonic Pi Portable.exe",
             "SonicPi"
         ]
     ],
