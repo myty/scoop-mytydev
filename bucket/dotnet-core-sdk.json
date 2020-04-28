@@ -1,10 +1,10 @@
 {
-    "version": "3.1.200",
+    "version": "3.1.201",
     "homepage": "https://www.microsoft.com/net/",
     "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
     "license": "MIT",
-    "url": "https://raw.githubusercontent.com/dotnet/sdk/78d1d208e2a86276224206d00b32313a0e527f15/scripts/obtain/dotnet-install.ps1#/_dotnet_install.ps1",
-    "hash": "71a888f99a73936de8cbcc494df2706f77a69a98a9962a0351052c350f95be39",
+    "url": "https://raw.githubusercontent.com/dotnet/sdk/78d9adc9ea1d0f4634e29e7e07d0ecdf62e5dbce/scripts/obtain/dotnet-install.ps1#/_dotnet_install.ps1",
+    "hash": "531d2c3caf0f8ec0c4fc91de4ae710e53cc9d456df61219f20a84639c70d128a",
     "bin": [
         [
             "pwsh.exe",
@@ -35,6 +35,7 @@
         "sdk",
         "shared",
         "store",
-        "templates"
+        "templates",
+        "dotnet.exe"
     ]
 }
