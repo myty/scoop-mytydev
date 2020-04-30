@@ -1,0 +1,19 @@
+{
+    "version": "2019.3.1",
+    "url": "https://www.nvaccess.org/files/nvda/releases/2019.3.1/nvda_2019.3.1.exe#/dl.7z",
+    "homepage": "https://github.com/nvaccess/nvda",
+    "hash": "8da120e06694a989a8f2af0780d297d238499f3b57dc959a4da5185377e132f0",
+    "extract_dir": "$PLUGINSDIR",
+    "bin": [
+        [
+            "app/nvda_uiAccess.exe",
+            "nvda"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "app/nvda_uiAccess.exe",
+            "nvda"
+        ]
+    ]
+}
