@@ -1,5 +1,5 @@
 {
-    "version": "3.1.201",
+    "version": "3.1.300",
     "homepage": "https://www.microsoft.com/net/",
     "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
     "license": "MIT",
@@ -12,7 +12,17 @@
             "-File $dir\\_dotnet_install.ps1 -InstallDir $dir"
         ]
     ],
-    "post_install": "dotnet-install -Version $version",
+    "pre_install": [
+        "if((Test-Path -Path $persist_dir\\bin\\dotnet.exe) -and !(Test-Path -Path $dir\\dotnet.exe)) { Copy-Item $persist_dir\\bin\\dotnet.exe -Destination $dir }"
+    ],
+    "post_install": [
+        "dotnet-install -Channel 2.1",
+        "dotnet-install -Channel 2.2",
+        "dotnet-install -Version $version",
+        "if(!(Test-Path -Path $persist_dir\\bin\\$version\\)) { New-Item -ItemType Directory -Force -Path $persist_dir\\bin\\$version\\ }",
+        "if(!(Test-Path -Path $persist_dir\\bin\\$version\\dotnet.exe)) { Copy-Item $dir\\dotnet.exe -Destination $persist_dir\\bin\\$version\\ }",
+        "Copy-Item $dir\\dotnet.exe -Destination $persist_dir\\bin\\ -Force"
+    ],
     "depends": "pwsh",
     "suggest": {
         "Visual C++ Redistributable": [
@@ -24,10 +34,6 @@
     "env_set": {
         "DOTNET_ROOT": "$dir"
     },
-    "checkver": {
-        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json",
-        "regex": "(?s)(?<rtv>[\\d.]+)[^\\d]*?([\\d.]+)[^\\d]*?(?:current|lts)"
-    },
     "persist": [
         "additionalDeps",
         "host",
@@ -35,7 +41,6 @@
         "sdk",
         "shared",
         "store",
-        "templates",
-        "dotnet.exe"
+        "templates"
     ]
 }
