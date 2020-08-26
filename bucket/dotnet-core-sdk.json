@@ -3,7 +3,7 @@
     "homepage": "https://www.microsoft.com/net/",
     "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
     "license": "MIT",
-    "url": "https://raw.githubusercontent.com/dotnet/sdk/78d9adc9ea1d0f4634e29e7e07d0ecdf62e5dbce/scripts/obtain/dotnet-install.ps1#/_dotnet_install.ps1",
+    "url": "https://raw.githubusercontent.com/dotnet/install-scripts/73d8d5599f1eb944618b225a2c697b5a44da4662/src/dotnet-install.ps1#/_dotnet_install.ps1",
     "hash": "531d2c3caf0f8ec0c4fc91de4ae710e53cc9d456df61219f20a84639c70d128a",
     "bin": [
         [
