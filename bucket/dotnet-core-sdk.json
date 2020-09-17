@@ -12,9 +12,7 @@
             "-File $dir\\_dotnet_install.ps1 -InstallDir $dir"
         ]
     ],
-    "pre_install": [
-        "if((Test-Path -Path $persist_dir\\bin\\dotnet.exe) -and !(Test-Path -Path $dir\\dotnet.exe)) { Copy-Item $persist_dir\\bin\\dotnet.exe -Destination $dir }"
-    ],
+    "pre_install": "if((Test-Path -Path $persist_dir\\bin\\dotnet.exe) -and !(Test-Path -Path $dir\\dotnet.exe)) { Copy-Item $persist_dir\\bin\\dotnet.exe -Destination $dir }",
     "post_install": [
         "dotnet-install -Channel 2.1",
         "dotnet-install -Channel 2.2",
