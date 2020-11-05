@@ -1,11 +1,11 @@
 {
-    "version": "3.11.5-1",
+    "version": "3.12.1-0",
     "description": "Install Alpine as a WSL Instance",
     "homepage": "https://github.com/yuk7/AlpineWSL/",
     "license": "MIT",
     "notes": "Even when you are logging in as 'root', some operations (like service command) require Windows administrator privileges",
-    "url": "https://github.com/yuk7/AlpineWSL/releases/download/3.11.5-1/Alpine.zip",
-    "hash": "48f7b9570e8b38ad08b1f003ce9d58894c2937b4201b6ecb875d39066e2294c7",
+    "url": "https://github.com/yuk7/AlpineWSL/releases/download/3.12.1-0/Alpine.zip",
+    "hash": "c6d82ccb96f72e4b9177c316b64728b1e6d556bb661ff530742bdf7e3c6c14b6",
     "##": "'rootfs' must be a 'real' directory (at least on Windows 10 RS4)",
     "post_install": [
         "$installable = $true",
