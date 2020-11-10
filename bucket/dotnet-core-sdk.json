@@ -1,10 +1,10 @@
 {
-    "version": "3.1.403",
+    "version": "5.0.100",
     "homepage": "https://www.microsoft.com/net/",
     "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
     "license": "MIT",
-    "url": "https://raw.githubusercontent.com/dotnet/install-scripts/f62fdea8691bcbd5f8887a2c045c12f5bd59b702/src/dotnet-install.ps1#/_dotnet_install.ps1",
-    "hash": "9122a7a3522dcc21d41749b1be3c4ed3e75295dd2aec89d26f3e7f48bb286949",
+    "url": "https://raw.githubusercontent.com/dotnet/install-scripts/1211ca046ea90ae08e7be193cb0e238e20b17bf8/src/dotnet-install.ps1#/_dotnet_install.ps1",
+    "hash": "f782bcf7b7f8e132e988608be217765144e34f5e1b93c240f1c91ae7616d02a6",
     "bin": [
         [
             "pwsh.exe",
@@ -14,9 +14,8 @@
     ],
     "pre_install": "if((Test-Path -Path $persist_dir\\bin\\dotnet.exe) -and !(Test-Path -Path $dir\\dotnet.exe)) { Copy-Item $persist_dir\\bin\\dotnet.exe -Destination $dir }",
     "post_install": [
+        "dotnet-install -Channel 3.1",
         "dotnet-install -Channel 2.1",
-        "dotnet-install -Channel 2.2",
-        "dotnet-install -Channel 3.0",
         "dotnet-install -Version $version",
         "if(!(Test-Path -Path $persist_dir\\bin\\$version\\)) { New-Item -ItemType Directory -Force -Path $persist_dir\\bin\\$version\\ }",
         "if(!(Test-Path -Path $persist_dir\\bin\\$version\\dotnet.exe)) { Copy-Item $dir\\dotnet.exe -Destination $persist_dir\\bin\\$version\\ }",
