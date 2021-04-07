@@ -1,0 +1,16 @@
+{
+    "version": "0.7.4",
+    "description": "Find files with SQL-like queries",
+    "homepage": "https://github.com/jhspetersson/fselect",
+    "license": {
+        "identifier": "Apache",
+        "url": "https://github.com/jhspetersson/fselect/blob/master/LICENSE-APACHE"
+    },
+    "url": "https://github.com/jhspetersson/fselect/releases/download/0.7.4/fselect-x86_64-win.zip",
+    "hash": "30114bb7a3b0e19aa42a441176efcde4ec155b3144ae5539815e2d42171a2b63",
+    "checkver": "github",
+    "autoupdate": {
+        "url": "https://github.com/jhspetersson/fselect/releases/download/$version/fselect-x86_64-win.zip"
+    },
+    "bin": "fselect.exe"
+}
