@@ -1,13 +1,13 @@
 {
-    "version": "0.30.0",
+    "version": "0.32.0",
     "description": "A modern shell written in Rust",
     "homepage": "https://www.nushell.sh",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/nushell/nushell/releases/download/0.30.0/nu_0_30_0_windows.zip",
-            "hash": "9b2b71d8cd460f2acec476bd011606da8b3c28c213f400e9e8dc03edebb67142",
-            "extract_dir": "nu_0_30_0_windows\\nushell-0.30.0"
+            "url": "https://github.com/nushell/nushell/releases/download/0.32.0/nu_0_32_0_windows.zip",
+            "hash": "c471cb4919ae15bc649c5661473edd0bb961eac32303a410eeeb7c18d562c070",
+            "extract_dir": "nu_0_32_0_windows\\nushell-0.32.0"
         }
     },
     "pre_install": [
