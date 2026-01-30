@@ -10,6 +10,7 @@
         }
     },
     "bin": "goose.exe",
+    "extract_dir": "goose-package",
     "checkver": {
         "github": "https://github.com/block/goose"
     },
