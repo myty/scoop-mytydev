@@ -1,10 +1,18 @@
-# Personal Scoop Bucket
+# scoop-mytydev
 
-This is my own versions of manifests for [Scoop](https://scoop.sh), the Windows command-line installer.
+Personal Scoop bucket for [Scoop](https://scoop.sh), the Windows command-line installer.
 
-Mostly a testing ground before moving any changes over to the main bucket.
+Testing ground for manifests before moving to the main bucket.
 
-How do I install these manifests?
----------------------------------
+## How do I install these manifests?
 
-Just `scoop install <manifest>`. This is the default bucket for Scoop and is added by default.
+After manifests have been committed and pushed, run the following:
+
+```pwsh
+scoop bucket add mytydev https://github.com/myty/scoop-mytydev
+scoop install mytydev/<manifestname>
+```
+
+## How do I contribute new manifests?
+
+To make a new manifest contribution, please read the [Contributing Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md) and [App Manifests](https://github.com/ScoopInstaller/Scoop/wiki/App-Manifests) wiki page.
