@@ -9,10 +9,9 @@
             "hash": "97d8951e54aea605c281d9f6ea5cb623f2e0975a51fbd142711d6c1657cb0b00"
         }
     },
-    "extract_dir": "Goose-win32-x64",
     "shortcuts": [
         [
-            "Goose.exe",
+            "dist-windows\\Goose.exe",
             "Goose"
         ]
     ],
